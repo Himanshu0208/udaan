@@ -1,0 +1,170 @@
+{% extends 'base.html' %}
+
+  {% block head %}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <script src="{{ url_for('static', filename='javascript/script.js') }}" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  {% endblock head %}
+  {% block body %}
+    <div id="content">
+      <p class="fail" style="color: red">{{fail}}</p>
+      <p class="sucess" style="color: rgb(92, 236, 92)">{{sucess}}</p>
+
+      <header><h1>Contribution Form</h1></header>
+      <section>
+        <form action="/insert" method="post">
+          <div class="row flow-horizontal" id="row1">
+            <div class="cell flow-vertical">
+              <label for="name">Enter your name :</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+
+            <div class="cell flow-vertical">
+              <label for="rollno">Enter your roll No :</label>
+              <input
+                type="text"
+                name="rollno"
+                id="rollno"
+                placeholder="Enter your roll number"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="row flow-horizontal" id="row2">
+            <div class="cell flow-vertical">
+              <label for="contact">Enter your contact no. :</label>
+              <input
+                type="text"
+                name="contact"
+                id="contact"
+                placeholder="Enter your contact no."
+                required
+              />
+            </div>
+
+            <div class="cell flow-vertical">
+              <label for="email">Enter your email :</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your college email"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="row flow-horizontal" id="row3">
+            <div class="cell flow-vertical">
+              <label for="contact">Enter your course :</label>
+              <select name="course" id="course" required>
+                <option value="Choose">Choose Your Course</option>
+                <option value="btech">B.tech</option>
+                <option value="bca">BCA</option>
+                <option value="bba">BBA</option>
+              </select>
+            </div>
+
+            <div class="cell flow-vertical">
+              <label for="email">Enter your branch :</label>
+              <select name="branch" id="branch" required>
+                <option value="Choose">Choose Your Branch</option>
+                <option value="Computer">Computer Engg.</option>
+                <option value="Computer-with-data-science">
+                  Computer Engg.with data science
+                </option>
+                <option value="IT">Information Technology</option>
+                <option value="Mechincal">Mechincal</option>
+                <option value="Electrical">Electrical</option>
+                <option value="Electronic-and-computer">
+                  Electronic and computer
+                </option>
+                <option value="Civil">Civil</option>
+                <option value="Electronics-IOT">Electronics-IOT</option>
+                <option value="RAI">
+                  Robotics and acrtificial intellgence
+                </option>
+                <option value="BCA">BCA</option>
+                <option value="BBA">BBA</option>
+                <option value="MCA">MCA</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row flow-horizontal" id="row4">
+            <div class="cell flow-vertical">
+              <label for="company">Enter the company name :</label>
+              <input
+                type="text"
+                name="company"
+                id="company"
+                placeholder="Enter the company name that asked this question."
+                required
+              />
+            </div>
+
+            <div class="cell flow-vertical">
+              <label for="year">Enter your year :</label>
+              <select name="year" id="year" required>
+                <option value="Choose">Choose Your Year</option>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+              </select>
+            </div>
+          </div>
+          <div class="row flow-horizontal" id="row5">
+            <div class="cell flow-vertical" id="questions">
+              <label for="question">Enter the question's aksed :</label>
+              <input
+                type="text"
+                name="question"
+                id="question"
+                placeholder="Write only one question in this input feild add more for the next questions"
+                required
+              />
+              <button
+                onclick="addMore(self)"
+                id="addmore"
+                style="
+                  border-radius: 50%;
+                  width: fit-content;
+                  background-color: aliceblue;
+                  align-self: center;
+                "
+              >
+                <i
+                  class="material-icons"
+                  style="color: black; font-weight: bolder"
+                  >add</i
+                >
+              </button>
+            </div>
+          </div>
+
+          <div class="row" id="row6">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+          </div>
+        </form>
+      </section>
+      <footer>
+        An Intiative by UDAAN
+        <span><img src="image/udaan.jpeg" alt="Udaan logo" height="20px" /></span>
+      </footer>
+    </div>
+    {% endblock body %}

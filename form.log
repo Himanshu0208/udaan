@@ -1,0 +1,608 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.12:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 8, in hello_world
+    return render_template('index.html')
+  File "/config/.local/lib/python3.8/site-packages/flask/templating.py", line 146, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/config/.local/lib/python3.8/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/config/workspace/templates/index.html", line 171, in template
+    {% endblock  'base.html' %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'endblock'.
+INFO:werkzeug:172.18.0.2 - - [08/Mar/2023 21:23:47] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:172.18.0.2 - - [08/Mar/2023 21:23:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.12:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 8, in hello_world
+    return render_template('index.html')
+  File "/config/.local/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/config/.local/lib/python3.8/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/config/workspace/templates/index.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/config/.local/lib/python3.8/site-packages/flask/templating.py", line 62, in get_source
+    return self._get_source_fast(environment, template)
+  File "/config/.local/lib/python3.8/site-packages/flask/templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: base.html
+INFO:werkzeug:172.18.0.2 - - [08/Mar/2023 21:25:29] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.12:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:172.18.0.2 - - [08/Mar/2023 21:26:55] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [08/Mar/2023 21:26:55] "GET /static/javascript/script.js HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [08/Mar/2023 21:26:56] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [08/Mar/2023 21:26:56] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [08/Mar/2023 21:26:56] "[33mGET /image/udaan.jpeg HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [08/Mar/2023 21:26:56] "GET /static/css/jcbust.jpeg HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [08/Mar/2023 21:27:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [08/Mar/2023 21:29:55] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [08/Mar/2023 21:29:55] "GET /static/javascript/script.js HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [08/Mar/2023 21:29:55] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [08/Mar/2023 21:29:55] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [08/Mar/2023 21:29:55] "[33mGET /image/udaan.jpeg HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [08/Mar/2023 21:29:56] "GET /static/css/jcbust.jpeg HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [08/Mar/2023 21:29:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.5:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 09:43:58] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 09:43:58] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 09:43:58] "GET /static/javascript/script.js HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 09:43:59] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 09:43:59] "[33mGET /image/udaan.jpeg HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 09:43:59] "GET /static/css/jcbust.jpeg HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 09:43:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 09:45:17] "[33mPOST /insert HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.5:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 09:47:04] "[33mGET /image/udaan.jpeg HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 09:47:07] "POST /insert HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 09:47:07] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 09:47:07] "[36mGET /static/javascript/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 09:47:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 09:47:07] "[33mGET /image/udaan.jpeg HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 09:47:07] "[36mGET /static/css/jcbust.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.5:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 09:59:24] "POST /insert HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 09:59:24] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 09:59:24] "GET /static/javascript/script.js HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 09:59:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 09:59:24] "[33mGET /image/udaan.jpeg HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 09:59:24] "[36mGET /static/css/jcbust.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 09:59:58] "POST /insert HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 09:59:58] "[36mGET /static/javascript/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 09:59:58] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 09:59:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 09:59:58] "[33mGET /image/udaan.jpeg HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 09:59:58] "[36mGET /static/css/jcbust.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 10:00:16] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 10:00:17] "[36mGET /static/javascript/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 10:00:17] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 10:00:17] "[33mGET /image/udaan.jpeg HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 10:00:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 10:00:17] "[36mGET /static/css/jcbust.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 10:00:25] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 10:00:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.5:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 10:02:07] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 10:02:07] "GET /static/javascript/script.js HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 10:02:08] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 10:02:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 10:02:08] "[33mGET /image/udaan.jpeg HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 10:02:08] "[36mGET /static/css/jcbust.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.5:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 10:03:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 10:03:11] "[36mGET /static/javascript/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 10:03:11] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 10:03:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 10:03:11] "[33mGET /image/udaan.jpeg HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 10:03:11] "[36mGET /static/css/jcbust.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 10:03:51] "POST /insert HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 10:03:51] "[36mGET /static/javascript/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 10:03:51] "[33mGET /image/udaan.jpeg HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 10:03:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 10:03:51] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 10:03:51] "[36mGET /static/css/jcbust.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.17:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 12:36:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 12:36:11] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 12:36:11] "GET /static/javascript/script.js HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 12:36:11] "[33mGET /image/udaan.jpeg HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 12:36:11] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 12:36:12] "[36mGET /static/css/jcbust.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 12:36:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ERROR:app:Exception on /insert [POST]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 47, in submit
+    "course" : courses[course]
+KeyError: 'btech'
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 12:36:36] "[35m[1mPOST /insert HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.17:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /insert [POST]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 49, in submit
+    checkUser(user)
+NameError: name 'checkUser' is not defined
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 12:38:24] "[35m[1mPOST /insert HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.17:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /insert [POST]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 49, in submit
+    checkUser(user)
+  File "app.py", line 9, in checkUser
+    collection_user = db.user
+NameError: name 'db' is not defined
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 12:39:15] "[35m[1mPOST /insert HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.17:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /insert [POST]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 48, in submit
+    if collection_user.count({"_id" : rollno}) == 0:
+  File "/config/.local/lib/python3.8/site-packages/pymongo/collection.py", line 3213, in __call__
+    raise TypeError(
+TypeError: 'Collection' object is not callable. If you meant to call the 'count' method on a 'Collection' object it is failing because no such method exists.
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 12:40:07] "[35m[1mPOST /insert HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.17:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /insert [POST]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 48, in submit
+    if collection_user.find({"_id" : rollno}).count() == 0:
+AttributeError: 'Cursor' object has no attribute 'count'
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 12:43:42] "[35m[1mPOST /insert HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.17:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 12:44:45] "POST /insert HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 12:44:46] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 12:44:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 12:44:46] "[36mGET /static/javascript/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 12:44:46] "[33mGET /image/udaan.jpeg HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 12:44:46] "[36mGET /static/css/jcbust.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.44:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 15:43:13] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 15:43:14] "GET /static/javascript/script.js HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 15:43:14] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 15:43:14] "[33mGET /image/udaan.jpeg HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 15:43:14] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 15:43:14] "GET /static/css/jcbust.jpeg HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 15:43:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ERROR:app:Exception on /insert [POST]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 46, in submit
+    "branch" : courses[branch]
+KeyError: ''
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 15:44:19] "[35m[1mPOST /insert HTTP/1.1[0m" 500 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 15:45:18] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 15:45:18] "[36mGET /static/javascript/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 15:45:18] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 15:45:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 15:45:18] "[33mGET /image/udaan.jpeg HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 15:45:18] "[36mGET /static/css/jcbust.jpeg HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /insert [POST]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 65, in submit
+    collection_questions.insert_many(questions)
+  File "/config/.local/lib/python3.8/site-packages/pymongo/_csot.py", line 105, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/config/.local/lib/python3.8/site-packages/pymongo/collection.py", line 714, in insert_many
+    blk.execute(write_concern, session=session)
+  File "/config/.local/lib/python3.8/site-packages/pymongo/bulk.py", line 513, in execute
+    return self.execute_command(generator, write_concern, session)
+  File "/config/.local/lib/python3.8/site-packages/pymongo/bulk.py", line 394, in execute_command
+    _raise_bulk_write_error(full_result)
+  File "/config/.local/lib/python3.8/site-packages/pymongo/bulk.py", line 136, in _raise_bulk_write_error
+    raise BulkWriteError(full_result)
+pymongo.errors.BulkWriteError: batch op errors occurred, full error: {'writeErrors': [{'index': 1, 'code': 11000, 'keyPattern': {'_id': 1}, 'keyValue': {'_id': '${rollno}-${count}'}, 'errmsg': 'E11000 duplicate key error collection: udaan_contribution.questions index: _id_ dup key: { _id: "${rollno}-${count}" }', 'op': {'_id': '${rollno}-${count}', 'question': '5+4', 'company': 'samsung', 'year': '2022'}}], 'writeConcernErrors': [], 'nInserted': 1, 'nUpserted': 0, 'nMatched': 0, 'nModified': 0, 'nRemoved': 0, 'upserted': []}
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 15:47:04] "[35m[1mPOST /insert HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /insert [POST]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 65, in submit
+    questions.append(ques)
+  File "/config/.local/lib/python3.8/site-packages/pymongo/_csot.py", line 105, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/config/.local/lib/python3.8/site-packages/pymongo/collection.py", line 714, in insert_many
+    blk.execute(write_concern, session=session)
+  File "/config/.local/lib/python3.8/site-packages/pymongo/bulk.py", line 513, in execute
+    return self.execute_command(generator, write_concern, session)
+  File "/config/.local/lib/python3.8/site-packages/pymongo/bulk.py", line 394, in execute_command
+    _raise_bulk_write_error(full_result)
+  File "/config/.local/lib/python3.8/site-packages/pymongo/bulk.py", line 136, in _raise_bulk_write_error
+    raise BulkWriteError(full_result)
+pymongo.errors.BulkWriteError: batch op errors occurred, full error: {'writeErrors': [{'index': 0, 'code': 11000, 'keyPattern': {'_id': 1}, 'keyValue': {'_id': '${rollno}-${count}'}, 'errmsg': 'E11000 duplicate key error collection: udaan_contribution.questions index: _id_ dup key: { _id: "${rollno}-${count}" }', 'op': {'_id': '${rollno}-${count}', 'question': 'tell your name ', 'company': 'samsung', 'year': '2022'}}], 'writeConcernErrors': [], 'nInserted': 0, 'nUpserted': 0, 'nMatched': 0, 'nModified': 0, 'nRemoved': 0, 'upserted': []}
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 15:49:27] "[35m[1mPOST /insert HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.44:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /insert [POST]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 67, in submit
+    collection_questions.insert_many(questions)
+  File "/config/.local/lib/python3.8/site-packages/pymongo/_csot.py", line 105, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/config/.local/lib/python3.8/site-packages/pymongo/collection.py", line 714, in insert_many
+    blk.execute(write_concern, session=session)
+  File "/config/.local/lib/python3.8/site-packages/pymongo/bulk.py", line 513, in execute
+    return self.execute_command(generator, write_concern, session)
+  File "/config/.local/lib/python3.8/site-packages/pymongo/bulk.py", line 394, in execute_command
+    _raise_bulk_write_error(full_result)
+  File "/config/.local/lib/python3.8/site-packages/pymongo/bulk.py", line 136, in _raise_bulk_write_error
+    raise BulkWriteError(full_result)
+pymongo.errors.BulkWriteError: batch op errors occurred, full error: {'writeErrors': [{'index': 0, 'code': 11000, 'keyPattern': {'_id': 1}, 'keyValue': {'_id': '${rollno}-${count}'}, 'errmsg': 'E11000 duplicate key error collection: udaan_contribution.questions index: _id_ dup key: { _id: "${rollno}-${count}" }', 'op': {'_id': '${rollno}-${count}', 'question': 'tell your name ', 'company': 'samsung', 'year': '2022'}}], 'writeConcernErrors': [], 'nInserted': 0, 'nUpserted': 0, 'nMatched': 0, 'nModified': 0, 'nRemoved': 0, 'upserted': []}
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 15:49:53] "[35m[1mPOST /insert HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.44:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /insert [POST]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 67, in submit
+    prrint(questions)
+NameError: name 'prrint' is not defined
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 15:52:00] "[35m[1mPOST /insert HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.44:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 15:56:32] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 15:56:32] "[36mGET /static/javascript/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 15:56:32] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 15:56:32] "[33mGET /image/udaan.jpeg HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 15:56:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 15:56:32] "[36mGET /static/css/jcbust.jpeg HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /insert [POST]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 58, in submit
+    for i in question:
+NameError: name 'question' is not defined
+ERROR:app:Exception on /insert [POST]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 58, in submit
+    for i in question:
+NameError: name 'question' is not defined
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 15:57:50] "[35m[1mPOST /insert HTTP/1.1[0m" 500 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 15:57:50] "[35m[1mPOST /insert HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.44:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:01:58] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:01:58] "[36mGET /static/javascript/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:01:58] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:01:58] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:01:58] "[33mGET /image/udaan.jpeg HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:01:58] "[36mGET /static/css/jcbust.jpeg HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /insert [POST]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 58, in submit
+    for i in question:
+NameError: name 'question' is not defined
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:02:21] "[35m[1mPOST /insert HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.44:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /insert [POST]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 58, in submit
+    for i in question:
+NameError: name 'question' is not defined
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:03:11] "[35m[1mPOST /insert HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.44:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /insert [POST]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 58, in submit
+    for i in question:
+NameError: name 'question' is not defined
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:04:33] "[35m[1mPOST /insert HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.44:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /insert [POST]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 68, in submit
+    prrint("list is" , questions_data)
+NameError: name 'prrint' is not defined
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:05:07] "[35m[1mPOST /insert HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /insert [POST]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 68, in submit
+    print("list is" , questions_data)
+NameError: name 'prrint' is not defined
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:05:42] "[35m[1mPOST /insert HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.44:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:06:12] "POST /insert HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:06:13] "[36mGET /static/javascript/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:06:13] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:06:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:06:13] "[33mGET /image/udaan.jpeg HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:06:13] "[36mGET /static/css/jcbust.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:06:36] "POST /insert HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:06:37] "[36mGET /static/javascript/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:06:37] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:06:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:06:37] "[33mGET /image/udaan.jpeg HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:09:46] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:09:46] "[36mGET /static/javascript/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:09:46] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:09:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:09:46] "[33mGET /image/udaan.jpeg HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:09:46] "[36mGET /static/css/jcbust.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:10:27] "POST /insert HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:10:27] "[36mGET /static/javascript/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:10:27] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:10:27] "[33mGET /image/udaan.jpeg HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:10:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:10:27] "[36mGET /static/css/jcbust.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:12:45] "POST /insert HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:12:45] "[36mGET /static/javascript/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:12:45] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:12:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:12:45] "[33mGET /image/udaan.jpeg HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:12:45] "[36mGET /static/css/jcbust.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.44:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:13:31] "POST /insert HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:13:31] "[36mGET /static/javascript/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:13:31] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:13:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:13:31] "[33mGET /image/udaan.jpeg HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:13:31] "[36mGET /static/css/jcbust.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:16:44] "POST /insert HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:16:45] "[36mGET /static/javascript/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:16:45] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:16:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:16:45] "[33mGET /image/udaan.jpeg HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:16:45] "[36mGET /static/css/jcbust.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.44:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:17:46] "POST /insert HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:17:47] "[36mGET /static/javascript/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:17:47] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:17:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:17:47] "[33mGET /image/udaan.jpeg HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [09/Mar/2023 16:17:48] "[36mGET /static/css/jcbust.jpeg HTTP/1.1[0m" 304 -
